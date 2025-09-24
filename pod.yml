@@ -10,12 +10,12 @@ spec:
         - containerPort: 3306
       envFrom:
         - configMapRef:
-          name: configpod
+            name: configpod
         - secretRef:
-          name: db-secret-pod
+            name: db-secret-pod
       volumeMounts:
         - name: mydb-values
-          mountpath: /var/lib/mysql
+          mountPath: /var/lib/mysql
   volumes:
     - configMap:
         name: configpod
