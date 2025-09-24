@@ -17,8 +17,10 @@ spec:
         - name: mydb-values
           mountPath: /var/lib/mysql
   volumes:
-    - configMap:
+    - name: config-volume
+      configMap:
         name: configpod
-    - secret:
-        name: my-values
+    - name: secret-volume  
+      secret:
+        #name: my-values
         secretName: db-secret-pod
