@@ -28,4 +28,4 @@ spec:
         name: config-pod-db
     - name: secret-volume
       secret:
-        secretName: db-secret-pod
+        secretName: db-secret-pod
