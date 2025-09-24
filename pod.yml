@@ -21,12 +21,11 @@ spec:
         - name: config-secret
           mountPath: /etc/secret
   volumes:
+    - name: mysql-data
+      emptyDir: {}
     - name: config-volume
       configMap:
         name: configpod
-    - name: config-volume-etc
-      configMap:
-        name: configpod
-    - name: secret-volume
+    - name: secret-volume  
       secret:
         secretName: db-secret-pod
