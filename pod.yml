@@ -16,11 +16,17 @@ spec:
       volumeMounts:
         - name: config-volume
           mountPath: /var/lib/mysql
+        - name: config-mount
+          mountPath: /etc/config
+        - name: config-secret
+          mountPath: /etc/secret
   volumes:
     - name: config-volume
       configMap:
         name: configpod
-    - name: secret-volume  
+    - name: config-volume-etc
+      configMap:
+        name: configpod
+    - name: secret-volume
       secret:
-        #name: my-values
         secretName: db-secret-pod
