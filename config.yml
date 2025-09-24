@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configpod
+data:
+  MYSQL_ROOT_PASSWORD: root1
+  MY_SQL_DATABASE: dummydata
+  # MYSQL_USER: dheeraj
+  # MYSQL_PASSWORD: admin@123
+  url: https://www.linkedin.com/feed/
+  git_url: https://github.com/dheerajboredha
