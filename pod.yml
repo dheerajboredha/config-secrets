@@ -14,7 +14,7 @@ spec:
         - secretRef:
             name: db-secret-pod
       volumeMounts:
-        - name: mydb-values
+        - name: config-volume
           mountPath: /var/lib/mysql
   volumes:
     - name: config-volume
